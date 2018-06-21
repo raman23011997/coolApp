@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>Players</h1>
+    
+        
+        <table>
+            <thead>
+              <tr>
+              <th>Name</th>
+              <th>Team</th>
+                <th>Jersey number</th>
+                
+    <% for (let i = 0; i < player.length; i++) { %>
+
+              </tr>
+            </thead>
+            <tbody>
+      
+              <tr>
+         <% 
+            const lname = player[i].lastName
+            const fname = player[i].firstName
+            const f1= fname.substring(1,-2);
+           const name =f1+"."+lname;
+                %> 
+                <td><%= name %></td>
+             <td><%= player[i].team %></td>
+            
+                <td><%= player[i].jersey %></td>
+              </tr>         
+            </tbody>
+            <% } %>
+          </table>
+            
+    </div>
+</body>
+</html>
